@@ -3,29 +3,30 @@ import {Menu, MenuButton, MenuList, MenuItem, Flex, Box, Spacer} from '@chakra-u
 
 const NavBar = () => {
     return (
-        <Flex>
+        <nav>
+            <Flex px="5%" py="2%" h="15vh" alignItems="center" justifyContent="center">
             <Box>
-                <h1>Aizquel's E-Commerce</h1>
+                <img className="logo" src="/img/gamebit-logo.png" alt="GameBit Logo" />
             </Box>
             <Spacer />
-            <Box>
+            <Box className='categories'>
                 <Menu>
                     <MenuButton>
                         Categorías
                     </MenuButton>
-                    <MenuList>
-                        <MenuItem>Category 1</MenuItem>
-                        <MenuItem>Category2</MenuItem>
-                        <MenuItem>Category 3</MenuItem>
-                        <MenuItem>Category 4</MenuItem>
+                    <MenuList color="#000">
+                        <MenuItem>Sony</MenuItem>
+                        <MenuItem>Nintendo</MenuItem>
+                        <MenuItem>Microsoft</MenuItem>
+                        <MenuItem>Portátiles</MenuItem>
                     </MenuList>
                 </Menu>
             </Box>
-            <Spacer />
             <Box>
                 <CartWidget/>
             </Box>
         </Flex>
+        </nav>
     )
 }
 
