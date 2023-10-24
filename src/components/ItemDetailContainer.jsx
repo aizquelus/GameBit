@@ -1,10 +1,9 @@
-import ItemList from "./ItemList"
+import ItemDetail from "./ItemDetail";
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
 
-const ItemListContainer = () => {
 
-    const { categoryId } = useParams();
+const ItemDetailContainer = () => {
+
 
     const showProducts = new Promise((resolve, reject)=> {
 
@@ -39,15 +38,13 @@ const ItemListContainer = () => {
         });
     }, [])
 
-    const filterByCategory = items.filter((i) => i.category == categoryId);
-    
     return (
         <div className="products-body">
-            <ItemList items={!categoryId ? items : filterByCategory}></ItemList>
+            <ItemDetail
+                items={items}
+            />
         </div>
     )
 }
 
-export default ItemListContainer
-
-    
+export default ItemDetailContainer
