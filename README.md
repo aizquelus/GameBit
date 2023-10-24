@@ -1,8 +1,5 @@
-# React + Vite
+# GameBit E-commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Basic Navigation Demo:
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![navigation-demo](https://github.com/aizquelus/PreEntrega2-Urdaneta/assets/69555720/5bbc6196-6e74-4fc3-bb60-9f3195852207)
