@@ -127,6 +127,11 @@ div .flex-container:not(:last-child) {
   font-size: 2rem;
 }
 
+div .ftr-fst-child {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 @media (max-width: 1023px) {
 
   .detail-container,
@@ -156,6 +161,14 @@ div .flex-container:not(:last-child) {
 
   .container {
     order: 2;
+  }
+
+  div .ftr-fst-child {
+    flex-direction: column;
+  }
+
+  .ftr-fst-child > *:not(:last-child) {
+    margin-bottom: 20px;
   }
 
 }
