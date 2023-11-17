@@ -40,16 +40,10 @@ Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.co
 ### Installation
 
 1. Clone the repository: `git clone https://github.com/your-username/gamebit.git`
-2. Navigate to the project directory:: `cd gamebit`
+2. Navigate to the project directory: `cd gamebit`
 3. Install dependencies: `npm install`
 4. Start development server: `npm start`
 5. pen your browser and go to the specified `localhost` to view the application.
-
-## Usage
-
-To run the GameBit E-Commerce application locally, follow these steps, after completing the [installation](#installation):
-
-1. 
 
 ## Project Structure
 
