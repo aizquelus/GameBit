@@ -37,7 +37,7 @@ const Brief = () => {
                                         </Text>
 
                                         <NumberInput
-                                            size='sm'
+                                            size='lg'
                                             maxW={20}
                                             defaultValue={itemQty}
                                             min={1}
