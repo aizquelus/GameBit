@@ -45,7 +45,7 @@ const Form = () => {
 
     return (
         <>
-            <Box alignSelf="flex-start" w="20%" marginLeft="60px">
+            <Box className='form-container'>
                 <Heading size="lg">You're almost done!</Heading>
                 <p>Fill the form to finish your order</p>
                 <form action="" onSubmit={handleSubmit}>
@@ -54,7 +54,7 @@ const Form = () => {
                         <Input mb="10px" type="email" placeholder="Email" onChange={(e) => setClientEmail(e.target.value)} required />
                     </Flex>
 
-                    <Button isLoading={isLoading} type="submit" color="#fff" bg='#56008f' _hover={{ bg: '#6f319b' }} size='md'>Finish Order</Button>
+                    <Button isLoading={isLoading} type="submit" color="#fff" bg='#56008f' _hover={{ bg: '#6f319b' }} size='lg'>Finish Order</Button>
                 </form>
 
             </Box>

@@ -54,7 +54,7 @@ div .qty-wrapper {
 div .qty-wrapper > * {
   border-radius: 50%;
   margin-right: 10px;
-  border: 1px solid #b6b6b6;
+  border: 1px solid #4e4e4e;
   width: 40px;
   height: 40px;
   padding: 0;
@@ -85,15 +85,43 @@ div .flex-container:not(:last-child) {
   border-radius: 5px;
 }
 
+.form-container {
+  align-self: flex-start;
+  width: 20%;
+  margin-left: 60px;
+}
+
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    background-color: #9e3cdf;
+    color: #FFFFFF;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
 @media (max-width: 1023px) {
 
-  .detail-container {
+  .detail-container, .checkout-container {
     flex-direction: column;
     align-items: center;
   }
 
-  div .detail-container > * {
+  div .detail-container > *, div .checkout-container > * {
     width: 100%;
     margin-bottom: 20px;
+    margin-right: 0;
   }
+
+  .form-container {
+  align-self: center;
+  width: 100%;
+  margin-left: 0;
+  margin-bottom: 40px;
+}
 }

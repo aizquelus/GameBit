@@ -4,6 +4,18 @@ export const CartContext = createContext([])
 
 export const CartProvider = ({ children }) => {
 
+    const scrollToTopBtn = document.getElementById("scrollToTop");
+
+    window.onscroll = function () {
+        
+        scrollToTopBtn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+    };
+
+    scrollToTopBtn.addEventListener("click", function () {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+
     const [cart, setCart] = useState([])
 
     const isInCart = id => cart.some(e => e.id == id)
