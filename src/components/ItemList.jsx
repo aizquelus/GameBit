@@ -1,12 +1,13 @@
+import React from "react"
 import Item from "./Item"
 
-const ItemList = ({items}) => {
+const ItemList = ({ items }) => {
     return (
         <>
-            {items.map((i)=>{
-                return(
-                    <Item 
-                        key={i.id} 
+            {items.map((i) => {
+                return (
+                    <Item
+                        key={i.id}
                         item={i}
                     />
                 )
@@ -15,4 +16,5 @@ const ItemList = ({items}) => {
     )
 }
 
-export default ItemList
+export default React.memo(ItemList)
+

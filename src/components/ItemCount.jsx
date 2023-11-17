@@ -1,43 +1,45 @@
-import { Button, Center } from "@chakra-ui/react"
-import { useState } from "react"
+import { Button, Flex, Center, Text, Box } from "@chakra-ui/react"
+import { useState, useContext } from "react"
+import { CartContext } from '../context/CartContext'
+import { useToast } from '@chakra-ui/react'
+const ItemCount = ({ item, initial }) => {
 
-const ItemCount = ({ stock, initial }) => {
+    const toast = useToast()
+
+    const { addItem } = useContext(CartContext)
 
     const [count, setCounter] = useState(initial);
 
-    const increase = () => {
-        count < stock ? setCounter(count + 1) : alert("Se ha superado el stock disponible para tu producto");
-    }
-
-    const decrease = () => {
-        count > 0 ? setCounter(count - 1) : alert("La cantidad de productos no puede ser menor a 0!");
-    }
-
-    const onAdd = ()=> {
-        if(stock == 0) {
-            alert("De momento, no hay stock del producto.")
-        } else {
-            if(count !== 0){
-                alert(`Agregaste ${count === 1 ? `1 producto` : `${count} productos`} al carrito!`)
-            } else {
-                alert(`Oops, parece que no hay productos qué agregar, por favor, indica una cantidad de productos válida.`)
-            }
+    const onAdd = () => {
+        if (count !== 0) {
+            addItem(item, count);
+            setCounter(initial)
+            toast({
+                title: `Added to cart! `,
+                description: `${count} ${item.title}${count == 1 ? " has" : "s have"} been added to your cart!`,
+                status: 'success',
+                duration: 5000,
+                position: "top",
+                isClosable: true
+            })
         }
     }
-    
 
     return (
-        <div>
-            <Center>
-                <Button color="#fff" bg='#56008f' size='sm' onClick={decrease}>-</Button>
-                <p>{count}</p>
-                <Button color="#fff" bg='#56008f' size='sm' onClick={increase}>+</Button>
-            </Center>
-            <div>
-                <Button className="add-btn" color="#fff" bg='#56008f' size='sm' onClick={onAdd}>Agregar al carrito</Button>
-            </div>
-        </div>
-        
+        <Flex direction="column" className='flex-container'>
+            <Box>
+                <Text fontSize="2xl" mt="30px" mb="10px">Amount</Text>
+                <Flex textAlign="center" className="qty-wrapper">
+                    <Button isDisabled={count == 0} color="#fff" bg='#222' size='sm' _hover={{ bg: '#444444' }} onClick={() => { count > 0 && setCounter(count - 1) }}>-</Button>
+                    <Box display="flex" justifyContent="center" alignItems="center">
+                        <Text display="inline-block" size='sm'>{count}</Text>
+                    </Box>
+                    <Button color="#fff" bg='#222' size='sm' _hover={{ bg: '#444444' }} onClick={() => { setCounter(count + 1) }}>+</Button>
+                </Flex>
+            </Box>
+            <Button isDisabled={count == 0} color="#fff" bg='#222' display="block" _hover={{ bg: '#444444' }} onClick={onAdd}>Add to Cart</Button>
+        </Flex>
+
     )
 }
 
