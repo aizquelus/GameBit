@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import CartWidget from './CartWidget'
-import { Menu, MenuButton, MenuList, MenuItem, Flex, Box, Spacer } from '@chakra-ui/react'
+import { Menu, MenuButton, MenuList, MenuItem, Flex, Box, Spacer, Image } from '@chakra-ui/react'
 
 const NavBar = () => {
 
@@ -11,7 +11,7 @@ const NavBar = () => {
             <Flex px="5%" py="2%" h="15vh" alignItems="center" justifyContent="center">
                 <Box>
                     <Link to={'/'}>
-                        <img className="logo" src="/img/gamebit-logo.png" alt="GameBit Logo" />
+                        <Image className="logo" src="/img/gamebit-logo.png" alt="GameBit Logo" />
                     </Link>
                 </Box>
                 <Spacer />

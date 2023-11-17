@@ -6,7 +6,7 @@ const Footer = () => {
             <Flex px="5%" py="3%" minH="15vh" justify="flex-end" direction="column">
                 <Flex justify="space-between" pb="15px">
                     <Image className="logo" src="/img/gamebit-logo-text.png" alt="GameBit Logo" maxW="150px" />
-                    <Spacer/>
+                    <Spacer />
                     <HStack>
                         <Button colorScheme='facebook' >
                             Facebook
@@ -16,7 +16,7 @@ const Footer = () => {
                         </Button>
                     </HStack>
                 </Flex>
-                
+
                 <Box>
                     <Text fontSize="lg" textAlign="center">© 2023 Gamebit. All rights reserved.</Text>
                 </Box>

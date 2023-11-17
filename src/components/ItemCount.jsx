@@ -1,7 +1,8 @@
-import { Button, Flex, Center, Text, Box } from "@chakra-ui/react"
+import { Button, Flex, Text, Box } from "@chakra-ui/react"
 import { useState, useContext } from "react"
 import { CartContext } from '../context/CartContext'
 import { useToast } from '@chakra-ui/react'
+
 const ItemCount = ({ item, initial }) => {
 
     const toast = useToast()

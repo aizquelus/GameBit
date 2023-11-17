@@ -15,11 +15,8 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-
         const db = getFirestore()
-
         const oneItem = doc(db, "consolas", `${id}`)
-
         getDoc(oneItem).then((snapshot) => {
             if (snapshot.exists()) {
                 const docs = snapshot.data()
@@ -27,7 +24,6 @@ const ItemDetailContainer = () => {
                 setLoading(false)
             }
         })
-
     }, [])
 
     if (loading) {
@@ -37,14 +33,14 @@ const ItemDetailContainer = () => {
     return (
         <Flex className="products-body" direction="column" justifyContent="flex-start" alignItems="flex-start">
             <Link to={'/'}>
-            <IconButton
-                bg="#56008f"
-                color="#fff"
-                _hover={{ bg: '#6f319b' }}
-                size='lg'
-                icon={<ArrowBackIcon />}
-            />
-            
+                <IconButton
+                    bg="#56008f"
+                    color="#fff"
+                    _hover={{ bg: '#6f319b' }}
+                    size='lg'
+                    icon={<ArrowBackIcon />}
+                />
+
             </Link>
             {item && <ItemDetail item={item} />}
         </Flex>

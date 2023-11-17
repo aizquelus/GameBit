@@ -1,16 +1,8 @@
-import React from 'react'
 import { Button, Text, Badge } from '@chakra-ui/react'
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-} from '@chakra-ui/react'
+import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
-const ModalComponent = ({orderId, isOpen, handleCloseModal}) => {
+const ModalComponent = ({ orderId, isOpen, handleCloseModal }) => {
 
   return (
     <>

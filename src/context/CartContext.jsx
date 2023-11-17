@@ -4,18 +4,6 @@ export const CartContext = createContext([])
 
 export const CartProvider = ({ children }) => {
 
-    const scrollToTopBtn = document.getElementById("scrollToTop");
-
-    window.onscroll = function () {
-        
-        scrollToTopBtn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
-    };
-
-    scrollToTopBtn.addEventListener("click", function () {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    });
-
     const [cart, setCart] = useState([])
 
     const isInCart = id => cart.some(e => e.id == id)
@@ -28,11 +16,13 @@ export const CartProvider = ({ children }) => {
                     return { ...cartItem, qty: cartItem.qty + quantity };
                 } else if (operation === "decrement" && cartItem.qty > 1) {
                     return { ...cartItem, qty: cartItem.qty - quantity };
+                } else if (operation === "replace" && quantity > 0) {
+                    return { ...cartItem, qty: quantity };
                 }
             } else {
                 return cartItem;
             }
-            
+
         });
     };
 
@@ -67,7 +57,7 @@ export const CartProvider = ({ children }) => {
             setCart(prevState => updateCartItemQty(prevState, item.id, qty, "increment"))
         }
 
-        
+
     }
 
     const removeList = () => {

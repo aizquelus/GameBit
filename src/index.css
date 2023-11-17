@@ -11,7 +11,8 @@ body {
   color: #222;
 }
 
-nav, footer {
+nav,
+footer {
   color: #FFFFFF;
   background: rgb(86, 0, 143);
 }
@@ -51,7 +52,8 @@ nav, footer {
 div .qty-wrapper {
   margin-bottom: 20px;
 }
-div .qty-wrapper > * {
+
+div .qty-wrapper>* {
   border-radius: 50%;
   margin-right: 10px;
   border: 1px solid #4e4e4e;
@@ -60,20 +62,40 @@ div .qty-wrapper > * {
   padding: 0;
 }
 
-div .css-1cb8rm:hover:disabled, .css-1cb8rm[data-hover]:disabled, .css-1cb8rm:hover[disabled], .css-1cb8rm[data-hover][disabled], .css-1cb8rm:hover[aria-disabled=true], .css-1cb8rm[data-hover][aria-disabled=true], .css-1cb8rm:hover[data-disabled], .css-1cb8rm[data-hover][data-disabled] {
+div .css-1cb8rm:hover:disabled,
+.css-1cb8rm[data-hover]:disabled,
+.css-1cb8rm:hover[disabled],
+.css-1cb8rm[data-hover][disabled],
+.css-1cb8rm:hover[aria-disabled=true],
+.css-1cb8rm[data-hover][aria-disabled=true],
+.css-1cb8rm:hover[data-disabled],
+.css-1cb8rm[data-hover][data-disabled] {
   background: rgb(77, 77, 77);
 }
 
-div .css-1cb8rm:disabled, .css-1cb8rm[disabled], .css-1cb8rm[aria-disabled=true], .css-1cb8rm[data-disabled] {
-    opacity: 0.6;
+div .css-1cb8rm:disabled,
+.css-1cb8rm[disabled],
+.css-1cb8rm[aria-disabled=true],
+.css-1cb8rm[data-disabled] {
+  opacity: 0.6;
 }
 
-div .css-1ba44he:hover:disabled, .css-1ba44he[data-hover]:disabled, .css-1ba44he:hover[disabled], .css-1ba44he[data-hover][disabled], .css-1ba44he:hover[aria-disabled=true], .css-1ba44he[data-hover][aria-disabled=true], .css-1ba44he:hover[data-disabled], .css-1ba44he[data-hover][data-disabled] {
-    background: rgb(77, 77, 77);
+div .css-1ba44he:hover:disabled,
+.css-1ba44he[data-hover]:disabled,
+.css-1ba44he:hover[disabled],
+.css-1ba44he[data-hover][disabled],
+.css-1ba44he:hover[aria-disabled=true],
+.css-1ba44he[data-hover][aria-disabled=true],
+.css-1ba44he:hover[data-disabled],
+.css-1ba44he[data-hover][data-disabled] {
+  background: rgb(77, 77, 77);
 }
 
-div .css-1ba44he:disabled, .css-1ba44he[disabled], .css-1ba44he[aria-disabled=true], .css-1ba44he[data-disabled] {
-    opacity: 0.6;
+div .css-1ba44he:disabled,
+.css-1ba44he[disabled],
+.css-1ba44he[aria-disabled=true],
+.css-1ba44he[data-disabled] {
+  opacity: 0.6;
 }
 
 div .flex-container:not(:last-child) {
@@ -92,46 +114,48 @@ div .flex-container:not(:last-child) {
 }
 
 #scrollToTop {
-    display: none;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 99;
-    background-color: #9e3cdf;
-    color: #FFFFFF;
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    font-size: 2rem;
+  display: block;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  background-color: #9e3cdf;
+  color: #FFFFFF;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 2rem;
 }
 
 @media (max-width: 1023px) {
 
-  .detail-container, .checkout-container {
+  .detail-container,
+  .checkout-container {
     flex-direction: column;
     align-items: center;
   }
 
-  div .detail-container > *, div .checkout-container > * {
+  div .detail-container>*,
+  div .checkout-container>* {
     width: 100%;
     margin-bottom: 20px;
     margin-right: 0;
   }
 
   .form-container {
-  align-self: center;
-  width: 100%;
-  margin-left: 0;
-  margin-bottom: 40px;
-}
+    align-self: center;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
 
-.cart-btns {
-  order: 1;
-  margin-bottom: 20px;
-}
+  .cart-btns {
+    order: 1;
+    margin-bottom: 20px;
+  }
 
-.container {
-  order: 2;
-}
+  .container {
+    order: 2;
+  }
 
 }

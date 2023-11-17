@@ -1,7 +1,6 @@
-import React from 'react'
 import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
-import { Box, Card, Image, CardBody, Heading, Stack, Flex, Tooltip, Button, Text, IconButton, Spacer, NumberInput, NumberInputField, NumberInputStepper, NumberDecrementStepper, NumberIncrementStepper } from '@chakra-ui/react'
+import { Box, Card, Image, CardBody, Heading, Stack, Flex, Tooltip, Text, IconButton, Spacer, NumberInput, NumberInputStepper, NumberDecrementStepper, NumberIncrementStepper } from '@chakra-ui/react'
 import { DeleteIcon } from '@chakra-ui/icons'
 
 const Brief = () => {
@@ -27,7 +26,6 @@ const Brief = () => {
                                     fallbackSrc='https://via.placeholder.com/200x160'
                                     alt={`${title}`}
                                 />
-
                                 <Stack>
                                     <CardBody>
                                         <Heading size='lg'>{title}</Heading>
@@ -35,14 +33,15 @@ const Brief = () => {
                                         <Text py='2' >
                                             ${price * itemQty}
                                         </Text>
-
                                         <NumberInput
                                             size='lg'
                                             maxW={20}
                                             defaultValue={itemQty}
                                             min={1}
                                         >
-                                            <NumberInputField />
+                                            <Box border="1px solid #a7a7a7" pl="5px" borderRadius="5px">
+                                                <Text>{itemQty}</Text>
+                                            </Box>
                                             <NumberInputStepper>
                                                 <NumberIncrementStepper
                                                     onClick={() => {
@@ -57,7 +56,6 @@ const Brief = () => {
                                             </NumberInputStepper>
                                         </NumberInput>
                                     </CardBody>
-
                                 </Stack>
                                 <Spacer />
                                 <Tooltip label="Delete Product" aria-label='Delete product button'>

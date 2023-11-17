@@ -1,5 +1,5 @@
 import ItemList from "./ItemList"
-import { useState, useEffect, useContext } from "react"
+import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { collection, getDocs, getFirestore } from 'firebase/firestore'
 import Loader from "./Loader"
@@ -27,8 +27,8 @@ const ItemListContainer = () => {
 
     const filterByCategory = items.filter((i) => i.category == categoryId);
 
-    if(loading){
-        return <Loader/>
+    if (loading) {
+        return <Loader />
     }
 
     return (
