@@ -124,4 +124,14 @@ div .flex-container:not(:last-child) {
   margin-left: 0;
   margin-bottom: 40px;
 }
+
+.cart-btns {
+  order: 1;
+  margin-bottom: 20px;
+}
+
+.container {
+  order: 2;
+}
+
 }
