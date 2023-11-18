@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { doc, getDoc, getFirestore } from 'firebase/firestore'
 import { Link, useParams } from "react-router-dom";
 import Loader from "./Loader";
-import { IconButton, Flex } from '@chakra-ui/react'
+import { IconButton, Flex, Center, Badge } from '@chakra-ui/react'
 import { ArrowBackIcon } from "@chakra-ui/icons";
 
 
@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
 
     const { id } = useParams()
 
-    const [item, setItem] = useState([]);
+    const [item, setItem] = useState(null);
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
@@ -21,9 +21,9 @@ const ItemDetailContainer = () => {
             if (snapshot.exists()) {
                 const docs = snapshot.data()
                 setItem(docs)
-                setLoading(false)
             }
         })
+            .finally(() => setLoading(false))
     }, [])
 
     if (loading) {
@@ -42,7 +42,7 @@ const ItemDetailContainer = () => {
                 />
 
             </Link>
-            {item && <ItemDetail item={item} />}
+            {item ? <ItemDetail item={item} /> : <Center w="100%"><Badge colorScheme='red' textAlign="center" p="10px" opacity="0.9" fontSize="lg" borderRadius="5px" border="1px solid #ef777799">The product you're trying to look for does not exist! Please, go back to the catalog and try again.</Badge></Center>}
         </Flex>
     )
 }
