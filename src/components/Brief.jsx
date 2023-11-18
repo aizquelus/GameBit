@@ -27,7 +27,7 @@ const Brief = () => {
                                     alt={`${title}`}
                                 />
                                 <Stack>
-                                    <CardBody>
+                                    <CardBody minW="200px">
                                         <Heading size='lg'>{title}</Heading>
 
                                         <Text py='2' >
