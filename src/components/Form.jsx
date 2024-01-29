@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { collection, addDoc, getFirestore } from 'firebase/firestore'
-import { Flex, Button, Box, Input, Heading, Text, Spacer, FormErrorMessage, FormHelperText, FormControl } from '@chakra-ui/react'
+import { Flex, Button, Box, Input, Heading, FormErrorMessage, FormHelperText, FormControl } from '@chakra-ui/react'
 import { useDisclosure } from '@chakra-ui/react'
 import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'

@@ -176,3 +176,11 @@ div .checkout-container {
   }
 
 }
+
+@media (max-width: 375px) {
+  .cart-btns.css-17xdky7 {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+}
