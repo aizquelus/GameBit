@@ -13,7 +13,7 @@ const ItemDetail = ({ item }) => {
                     objectFit='cover'
                     w="100%"
                     src={`${image}`}
-                    fallbackSrc='https://via.placeholder.com/690x460'
+                    fallbackSrc='https://placehold.co/690x460'
                     alt={`${title}`}
                     title={`${title}`}
                 />
