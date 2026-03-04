@@ -14,7 +14,7 @@ const Item = ({ item }) => {
                         mb="15px"
                         objectFit='cover'
                         src={`${image}`}
-                        fallbackSrc='https://via.placeholder.com/350x200'
+                        fallbackSrc='https://placehold.co/350x200'
                         alt={`${title}`}
                     />
                     <Heading size='lg'>{title}</Heading>
