@@ -23,7 +23,7 @@ const Brief = () => {
                                     objectFit='cover'
                                     maxW={{ base: '100%', sm: '200px' }}
                                     src={`${image}`}
-                                    fallbackSrc='https://via.placeholder.com/200x160'
+                                    fallbackSrc='https://placehold.co/200x160'
                                     alt={`${title}`}
                                 />
                                 <Stack>
